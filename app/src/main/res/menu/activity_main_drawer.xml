@@ -10,15 +10,15 @@
             android:title="Berita Acara" />
         <item
             android:id="@+id/nav_pilpres"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_accessibility_black_24dp"
             android:title="Pemilihan Presiden" />
         <item
             android:id="@+id/nav_pileg"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_account_balance_black_24dp"
             android:title="Pemilihan Legislatif" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
     </group>
 
@@ -28,10 +28,6 @@
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
             <item
                 android:id="@+id/nav_out"
                 android:icon="@drawable/exit"

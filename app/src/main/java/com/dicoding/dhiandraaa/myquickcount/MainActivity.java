@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Intent fab = new Intent(MainActivity.this, FormPilPres.class);
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                startActivity(fab);
             }
         });
 
@@ -106,13 +108,9 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, "Pemilihan Presiden Selected",Toast.LENGTH_SHORT).show();
             startActivity(pilpres);
         } else if (id == R.id.nav_share) {
-
+            Intent share  = new Intent(MainActivity.this, Share.class);
             Toast.makeText(this, "Share Selected",Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_send) {
-
-            Toast.makeText(this, "Send Selected",Toast.LENGTH_SHORT).show();
-
+            startActivity(share);
         } else if (id == R.id.nav_out) {
             MainActivity.this.finish();
         }
