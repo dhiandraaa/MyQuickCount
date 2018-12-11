@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dicoding.dhiandraaa.myquickcount">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -28,10 +31,10 @@
         <activity android:name=".BeritaAcara" />
         <activity android:name=".Pilpres" />
         <activity android:name=".Pileg" />
-        <activity android:name=".Gallery" />
         <activity android:name=".FormPilPres" />
-        <activity android:name=".Share" />
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".CountPres" />
+        <activity android:name=".CountLeg"></activity>
     </application>
 
 </manifest>

@@ -16,18 +16,10 @@
             android:id="@+id/nav_pileg"
             android:icon="@drawable/ic_account_balance_black_24dp"
             android:title="Pemilihan Legislatif" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
     </group>
 
     <item android:title="Communicate">
         <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
             <item
                 android:id="@+id/nav_out"
                 android:icon="@drawable/exit"

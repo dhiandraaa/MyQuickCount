@@ -33,8 +33,9 @@
     <ImageView
         android:layout_alignParentTop="true"
         android:id="@+id/iv_camera"
-        android:layout_width="400dp"
-        android:layout_height="400dp" />
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/bt_camera"

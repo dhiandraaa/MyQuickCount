@@ -15,6 +15,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+/*
+Dhiandra Adithya Agsatra 1617051108
+Bisri Mustofa 1617051092
+Andres Hidayat 1617051081
+
+Kelas A
+ */
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -32,7 +41,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent fab = new Intent(MainActivity.this, FormPilPres.class);
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                Snackbar.make(view, "Lengkapi Data", Snackbar.LENGTH_LONG).setAction("Action",null).show();
                 startActivity(fab);
             }
         });
@@ -78,8 +87,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.exit) {
+            MainActivity.this.finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -95,10 +104,6 @@ public class MainActivity extends AppCompatActivity
             Intent berita  = new Intent(MainActivity.this, BeritaAcara.class);
             Toast.makeText(this, "Berita Acara Selected",Toast.LENGTH_SHORT).show();
             startActivity(berita);
-        } else if (id == R.id.nav_gallery) {
-            Intent gallery  = new Intent(MainActivity.this, Gallery.class);
-            Toast.makeText(this, "Gallery Selected",Toast.LENGTH_SHORT).show();
-            startActivity(gallery);
         } else if (id == R.id.nav_pileg) {
             Intent pileg  = new Intent(MainActivity.this, Pileg.class);
             Toast.makeText(this, "Pemilihan Legislatif Selected",Toast.LENGTH_SHORT).show();
@@ -107,12 +112,11 @@ public class MainActivity extends AppCompatActivity
             Intent pilpres  = new Intent(MainActivity.this, Pilpres.class);
             Toast.makeText(this, "Pemilihan Presiden Selected",Toast.LENGTH_SHORT).show();
             startActivity(pilpres);
-        } else if (id == R.id.nav_share) {
-            Intent share  = new Intent(MainActivity.this, Share.class);
-            Toast.makeText(this, "Share Selected",Toast.LENGTH_SHORT).show();
-            startActivity(share);
         } else if (id == R.id.nav_out) {
-            MainActivity.this.finish();
+            Intent backLogin = new Intent(MainActivity.this, Login.class);
+            Toast.makeText(this, "Logout Berhasil",Toast.LENGTH_SHORT).show();
+            startActivity(backLogin);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
